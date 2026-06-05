@@ -38,15 +38,15 @@ All files are written next to `dllmain.dll`.
 Requires Visual Studio (MSVC) on Windows. Run the provided build script:
 
 ```bat
-build_x64.bat   # produces injector.exe (x64) + dllmain.dll (x64)
-build_x86.bat   # produces injector.exe (x86) + dllmain.dll (x86)
+compile.bat   # produces injector.exe (x64) + dllmain.dll (x64)
+compile_X86.bat   # produces injector.exe (x86) + dllmain.dll (x86)
 ```
 
 Manual MSVC build:
 
 ```bat
-cl.exe /O2 /W4 /EHsc /Fe:injector.exe injector.cpp
-cl.exe /O2 /W4 /EHsc /LD /Fe:dllmain.dll dllmain.cpp
+cl.exe /O2 /W4 /EHsc /Fe:injector.exe injector.cxx
+cl.exe /O2 /W4 /EHsc /LD /Fe:dllmain.dll dllmain.cxx
 ```
 
 > **Architecture must match.** Use the x64 build for 64-bit targets and the x86 build for 32-bit targets. The injector will warn and exit if there is a mismatch.
