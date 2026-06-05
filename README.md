@@ -6,6 +6,8 @@ A Windows research tool that hooks `WriteProcessMemory` and `VirtualAllocEx` in 
 
 ## How it works
 
+[![showcase](https://cdn-cf-east.streamable.com/image/iaellg.jpg)](https://streamable.com/iaellg)
+
 `injector.exe` launches the target executable suspended, injects `dllmain.dll` via `LoadLibraryA` remote thread, then resumes the process. Once loaded, the DLL installs inline JMP hooks on `WriteProcessMemory` and `VirtualAllocEx` inside the target. Every call is intercepted, logged, and the written buffer is saved to a `.bin` file. Writes targeting executable memory regions are tagged `-EXEC` in the filename.
 
 ```
