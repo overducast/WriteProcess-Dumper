@@ -1,0 +1,1 @@
+g++ -O2 -Wall -m32 -o inject0r_x86.exe injector.cxx -lkernel32

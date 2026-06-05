@@ -1,0 +1,1 @@
+g++ -O2 -Wall -m32 -shared -o d8mper_x86.dll dllmain.cxx -lkernel32
